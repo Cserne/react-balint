@@ -35,7 +35,7 @@ for (const p of people) {
 
 const App = () => {
   
-  const [shouldShow, setShouldShow] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false); // itt az initial state-et (kb. default értéket) adjuk meg
   
   const myToggleFunction = () => {
     setShouldShow(!shouldShow)
