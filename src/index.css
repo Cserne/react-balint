@@ -1,5 +1,5 @@
 body {
-  background-color: red;
+  background-color: whitesmoke;
 }
 
 #first {
@@ -8,4 +8,12 @@ body {
 
 .myp {
   background-color: green;
+}
+
+.card {
+  border: 3px solid blue;
+}
+
+.card-content {
+  text-decoration: underline;
 }
