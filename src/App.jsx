@@ -1,4 +1,5 @@
 import './index.css'
+import { useState } from "react"
 
 let myName = "Bálint";
 let myNumber = 5;
@@ -31,18 +32,29 @@ for (const p of people) {
 //conditional rendering
 //operators
 
-let shouldShow = false;
-const myToggleFunction = () => {
-  shouldShow = !shouldShow
-}
 
 const App = () => {
+  
+  const [shouldShow, setShouldShow] = useState(false);
+  
+  const myToggleFunction = () => {
+    setShouldShow(!shouldShow)
+  }
+
+  const [counter, setCounter] = useState(1)
+
+  const myIncrementFunction = () => {
+    setCounter(counter+1)
+  }
   return (
     <div>
 
       {shouldShow ? <p>Hidden content is shown!!!</p> : <p>Secret content is hidden</p>}
 
       <button onClick={myToggleFunction}>Toggle</button>
+
+      <p>Counter value: {counter}</p>
+      <button onClick={myIncrementFunction}>Increment</button>
 
       <h1>Hello world</h1>
       <p>{ myName }</p>
