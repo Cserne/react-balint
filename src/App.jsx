@@ -20,7 +20,6 @@ let people = [
   {name: "Ottó", age: 25}
 ];
 
-
 /* let peopleCard = []
 for (const p of people) {
   peopleCard.push(<div className="card">
@@ -31,7 +30,6 @@ for (const p of people) {
 
 //conditional rendering
 //operators
-
 
 const App = () => {
   
@@ -46,15 +44,19 @@ const App = () => {
   const myIncrementFunction = () => {
     setCounter(counter+1)
   }
+
+  const [myArr, setArr] = useState([])
   return (
     <div>
 
-      {shouldShow ? <p>Hidden content is shown!!!</p> : <p>Secret content is hidden</p>}
-
+      { shouldShow ? <p>Hidden content is shown!!!</p> : <p>Secret content is hidden</p>}
       <button onClick={myToggleFunction}>Toggle</button>
 
       <p>Counter value: {counter}</p>
       <button onClick={myIncrementFunction}>Increment</button>
+      
+      <button onClick={() => setArr([...myArr, "Béla"])}>Add Béla</button>
+      { myArr.map(elem => <p>{ elem }</p>)}
 
       <h1>Hello world</h1>
       <p>{ myName }</p>
