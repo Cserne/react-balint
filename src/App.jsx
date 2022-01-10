@@ -31,6 +31,14 @@ for (const p of people) {
 //conditional rendering
 //operators
 
+/* let counter = 1;
+// const update = () => {
+  console.log(wcounter);
+  wcounter++;
+  console.log(wcounter);
+}
+ */
+
 const App = () => {
   
   const [shouldShow, setShouldShow] = useState(false); // itt az initial state-et (kb. default értéket) adjuk meg
@@ -42,7 +50,10 @@ const App = () => {
   const [counter, setCounter] = useState(1)
 
   const myIncrementFunction = () => {
-    setCounter(counter+1)
+    console.log(counter);
+    setCounter(counter+1);
+    console.log(counter);
+    console.log("--------");
   }
 
   const [myArr, setArr] = useState([])
@@ -54,7 +65,8 @@ const App = () => {
 
       <p>Counter value: {counter}</p>
       <button onClick={myIncrementFunction}>Increment</button>
-      
+      {/*       <button onClick={myIncrementFunction}>Wrong Increment</button>
+      */}      
       <button onClick={() => setArr([...myArr, "Béla"])}>Add Béla</button>
       { myArr.map(elem => <p>{ elem }</p>)}
 
